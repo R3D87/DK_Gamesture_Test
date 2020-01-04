@@ -440,7 +440,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.4e-44, y: 6e-45, z: 8e-45, w: 1.1754945e-38}
+  m_BoundingSphereOverride: {x: -2.1684043e-19, y: 1.5046328e-36, z: 2048, w: 2.3509923e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f06e2a47ba2279409219491c6c13f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 6be6ad45f6a589e4aaed793f4c57059f, type: 3}
+  _sound: {fileID: 8300000, guid: 6be6ad45f6a589e4aaed793f4c57059f, type: 3}
 --- !u!1 &860849731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1469,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776178028371175627, guid: 9d8a4727b22278942995765e4e3bdc3c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d8a4727b22278942995765e4e3bdc3c, type: 3}

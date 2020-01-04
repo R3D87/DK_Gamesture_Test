@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoundPlayer : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip sound;
+    private AudioClip _sound;
     private AudioSource _audioSource;
 
     private void Awake()
@@ -17,13 +17,13 @@ public class SoundPlayer : MonoBehaviour
         {
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
-        _audioSource.clip = sound;
+        _audioSource.clip = _sound;
         _audioSource.playOnAwake = false;
     }
 
     public void PlaySound()
     {
-        if (sound == null)
+        if (_sound == null)
             return;
 
         if (_audioSource.isPlaying)

@@ -9,9 +9,9 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
 
     [Header("Time in seconds")]
-    public float durationTime = 3;
-    public bool autostart = true;
-    public float RemainingTime { get { return durationTime - _elapsedTime; } }
+    public float DurationTime = 3;
+    public bool Autostart = true;
+    public float RemainingTime { get { return DurationTime - _elapsedTime; } }
     public UnityEvent OnTimeUpEvent;
 
     private bool _isExecuting = false;
@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
 
     private void OnEnable()
     {
-        if (autostart)
+        if (Autostart)
             Run();
     }
 
@@ -41,9 +41,13 @@ public class Timer : MonoBehaviour
                 OnTimeUpEvent.Invoke();
         }
     }
-    private bool IsTimeUp()
+    public bool IsTimeUp()
     {
-        return _elapsedTime >= durationTime;
+        return _elapsedTime >= DurationTime;
+    }
+    private void OnDisable()
+    {
+        _isExecuting = false;
     }
 }
     

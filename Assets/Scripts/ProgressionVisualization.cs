@@ -7,17 +7,20 @@ using UnityEngine.UI;
 public class ProgressionVisualization : MonoBehaviour
 {
     [SerializeField]
-    Slider slider;
-    float _duration;
+    private Slider slider;
+    private float _duration;
+  
+    Timer _timerComponent;
     private void Start()
     {
-        _duration = GetComponent<Timer>().durationTime;
+        _timerComponent = GetComponent<Timer>();
+        _duration = GetComponent<Timer>().DurationTime;
     }
 
-    float GetProgression()
+    private float GetProgression()
     {
         
-        return GetComponent<Timer>().RemainingTime/_duration; 
+        return _timerComponent.RemainingTime /_duration; 
     }
     private void Update()
     {
