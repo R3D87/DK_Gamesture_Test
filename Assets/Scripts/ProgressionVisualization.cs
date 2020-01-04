@@ -8,13 +8,12 @@ public class ProgressionVisualization : MonoBehaviour
 {
     [SerializeField]
     private Slider slider;
+    private Timer _timerComponent;
     private float _duration;
-  
-    Timer _timerComponent;
     private void Start()
     {
         _timerComponent = GetComponent<Timer>();
-        _duration = GetComponent<Timer>().DurationTime;
+        _duration = _timerComponent.DurationTime;
     }
 
     private float GetProgression()
